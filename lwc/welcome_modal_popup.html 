@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Welcome Modal/Popup</title>
+</head>
+<body>
+    <div class="modal-container">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Welcome</h2>
+            </div>
+            <div class="modal-body">
+                <p>Welcome to our website! We hope you enjoy your stay.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-close-button" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay" hidden> </div>
+    <button class="open-modal-button" onclick="openModal()">Open Modal/Popup</button>
+    <script>
+        function openModal() {
+            document.querySelector(".modal-overlay").removeAttribute("hidden");
+        }
+        function closeModal() {
+            document.querySelector(".modal-overlay").setAttribute("hidden", true);
+        }
+    </script>
+</body>
+</html>
